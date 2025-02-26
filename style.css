@@ -1,120 +1,147 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0a192f;
+    color: #e6f1ff;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
-    display: flex;
-    justify-content: center; /* Center the icons horizontally */
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
-    backdrop-filter: blur(10px); /* Blur effect for macOS-style translucency */
-    border-radius: 10px; /* Rounded corners */
-    padding: 10px 20px; /* Padding around the icons */
-    height: 60px; /* Fixed height for the dock */
-    width: auto; /* Auto width to fit content */
-    position: fixed; /* Fix the nav at the bottom */
-    bottom: 20px; /* Position from the bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    z-index: 1000; /* Ensure nav is above other content */
+    background-color: #112240;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 
-/* Navigation List */
-.nav-list {
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
     list-style: none;
-    display: flex;
-    flex-direction: row; /* Horizontal layout */
-    gap: 20px; /* Space between icons */
-    margin: 0;
-    padding: 0;
+    gap: 2rem;
 }
 
-.nav-list li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease-in-out; /* Smooth hover animation */
-}
-
-.nav-list li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+nav a {
+    color: #8892b0;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* Icons */
-.home-icon,
-.exercise-icon,
-.about-icon {
-    width: 40px; /* Slightly larger icons */
-    height: 40px;
-    object-fit: cover;
-    transition: transform 0.2s ease-in-out; /* Smooth hover animation */
+nav a:hover {
+    color: #64ffda;
 }
 
-/* Hover Effects */
-.nav-list li:hover .home-icon,
-.nav-list li:hover .exercise-icon,
-.nav-list li:hover .about-icon {
-    transform: scale(1.2); /* Scale up on hover */
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 2rem;
 }
 
-/* Main Content */
-.introduction,
-.introduction-exercise {
-    padding: 20px; /* Adjusted padding for all sides */
-    margin-bottom: 100px; /* Add margin to avoid overlap with fixed nav */
+section {
+    margin-bottom: 4rem;
 }
 
-.All-about,
-.about-me,
-.description-me {
+h1, h2, h3 {
+    color: #ccd6f6;
+    margin-bottom: 1.5rem;
+}
+
+/* About section */
+.about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.profile-img {
+    width: 200px;
+    height: auto;
+}
+
+/* Projects grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #112240;
+    padding: 1.5rem;
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact form */
+form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px; /* Adjusted padding for all sides */
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Profile Picture */
-.profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 20px auto; /* Center the profile picture */
-    display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+input, textarea {
+    padding: 0.8rem;
+    background-color: #112240;
+    border: 1px solid #233554;
+    border-radius: 4px;
+    color: #e6f1ff;
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    nav {
-        width: 90%; /* Full width on mobile */
-        bottom: 10px; /* Adjust position for mobile */
-        border-radius:15px; /* Slightly smaller rounded corners */
-    }
+.submit-btn {
+    background-color: transparent;
+    color: #64ffda;
+    border: 1px solid #64ffda;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
 
-    .nav-list {
-        gap: 40px; /* Reduce space between icons on mobile */
-    }
+.submit-btn:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
 
-    .home-icon,
-    .exercise-icon,
-    .about-icon {
-        width: 35px; /* Slightly smaller icons on mobile */
-        height: 35px;
-    }
+/* Footer */
+footer {
+    background-color: #112240;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
 
-    .introduction,
-    .introduction-exercise {
-        margin-bottom: 80px; /* Adjusted margin for mobile */
-    }
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: #8892b0;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #64ffda;
 }
