@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Data Types - C Programming Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1>C Programming</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#basics">Basics</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="topic-content">
+            <h1>Variables and Data Types in C</h1>
+            
+            <div class="topic-section">
+                <h2>Basic Data Types</h2>
+                <div class="code-example">
+                    <pre><code>
+int age = 25;              // Integer type
+float price = 99.99;       // Floating-point type
+char grade = 'A';          // Character type
+double pi = 3.14159265359; // Double precision floating-point
+                    </code></pre>
+                </div>
+                <p>C provides several basic data types that are essential for programming:</p>
+                <ul>
+                    <li><strong>int:</strong> Used for whole numbers (-2147483648 to 2147483647)</li>
+                    <li><strong>float:</strong> For decimal numbers (6 decimal places precision)</li>
+                    <li><strong>char:</strong> For single characters and small numbers</li>
+                    <li><strong>double:</strong> For high-precision decimal numbers</li>
+                </ul>
+            </div>
+
+            <div class="topic-section">
+                <h2>Modifiers</h2>
+                <div class="code-example">
+                    <pre><code>
+short int small_number = 32767;
+long int big_number = 2147483647L;
+unsigned int positive_only = 4294967295;
+                    </code></pre>
+                </div>
+                <p>Type modifiers change the range and behavior of basic data types:</p>
+                <ul>
+                    <li><strong>short:</strong> Reduces the size and range</li>
+                    <li><strong>long:</strong> Increases the size and range</li>
+                    <li><strong>unsigned:</strong> Removes negative numbers, doubling the positive range</li>
+                    <li><strong>signed:</strong> Allows negative numbers (default for most types)</li>
+                </ul>
+            </div>
+
+            <div class="topic-section">
+                <h2>Derived Data Types</h2>
+                <div class="code-example">
+                    <pre><code>
+int numbers[5] = {1, 2, 3, 4, 5};  // Array
+struct Person {                     // Structure
+    char name[50];
+    int age;
+    float height;
+};
+                    </code></pre>
+                </div>
+                <p>C also supports complex data types built from basic ones:</p>
+                <ul>
+                    <li><strong>Arrays:</strong> Collections of similar data types</li>
+                    <li><strong>Structures:</strong> Groups of related data of different types</li>
+                    <li><strong>Pointers:</strong> Variables that store memory addresses</li>
+                    <li><strong>Unions:</strong> Special structures where members share memory</li>
+                </ul>
+            </div>
+
+            <div class="topic-section">
+                <h2>Type Conversion</h2>
+                <div class="code-example">
+                    <pre><code>
+int x = 10;
+float y = (float)x;    // Explicit conversion
+float z = 3.14;
+int w = z;             // Implicit conversion
+                    </code></pre>
+                </div>
+                <p>Learn about type conversion in C:</p>
+                <ul>
+                    <li>Implicit conversion (automatic type conversion)</li>
+                    <li>Explicit conversion (type casting)</li>
+                    <li>Type promotion in expressions</li>
+                    <li>Potential data loss during conversion</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/phetpeeve" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 Japhet Personal Project. C Programming Guide. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

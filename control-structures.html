@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Structures - C Programming Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1>C Programming</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#basics">Basics</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="topic-content">
+            <h1>Control Structures in C</h1>
+            
+            <div class="topic-section">
+                <h2>Conditional Statements</h2>
+                <div class="code-example">
+                    <pre><code>
+// If statement
+if (age >= 18) {
+    printf("You can vote!");
+}
+
+// If-else statement
+if (score >= 60) {
+    printf("You passed!");
+} else {
+    printf("You failed.");
+}
+
+// If-else if-else
+if (grade >= 90) {
+    printf("A");
+} else if (grade >= 80) {
+    printf("B");
+} else if (grade >= 70) {
+    printf("C");
+} else {
+    printf("F");
+}
+                    </code></pre>
+                </div>
+                <p>Conditional statements allow your program to make decisions:</p>
+                <ul>
+                    <li>Simple if statements for single conditions</li>
+                    <li>if-else for two alternative paths</li>
+                    <li>if-else if ladder for multiple conditions</li>
+                    <li>Nested if statements for complex decision making</li>
+                </ul>
+            </div>
+
+            <div class="topic-section">
+                <h2>Switch Statement</h2>
+                <div class="code-example">
+                    <pre><code>
+switch (day) {
+    case 1:
+        printf("Monday");
+        break;
+    case 2:
+        printf("Tuesday");
+        break;
+    case 3:
+        printf("Wednesday");
+        break;
+    default:
+        printf("Other day");
+}
+                    </code></pre>
+                </div>
+                <p>Switch statements are ideal for multiple choice scenarios:</p>
+                <ul>
+                    <li>More efficient than multiple if-else statements</li>
+                    <li>Works with integers and characters</li>
+                    <li>Requires break statements to prevent fall-through</li>
+                    <li>Default case handles unmatched values</li>
+                </ul>
+            </div>
+
+            <div class="topic-section">
+                <h2>Loops</h2>
+                <div class="code-example">
+                    <pre><code>
+// For loop
+for (int i = 0; i < 5; i++) {
+    printf("%d ", i);
+}
+
+// While loop
+int count = 0;
+while (count < 5) {
+    printf("%d ", count);
+    count++;
+}
+
+// Do-while loop
+int num = 0;
+do {
+    printf("Enter a number (0 to exit): ");
+    scanf("%d", &num);
+} while (num != 0);
+                    </code></pre>
+                </div>
+                <p>Loops allow you to repeat code execution:</p>
+                <ul>
+                    <li><strong>for loop:</strong> Used when number of iterations is known</li>
+                    <li><strong>while loop:</strong> Used when condition needs to be checked before execution</li>
+                    <li><strong>do-while loop:</strong> Used when loop body must execute at least once</li>
+                </ul>
+            </div>
+
+            <div class="topic-section">
+                <h2>Jump Statements</h2>
+                <div class="code-example">
+                    <pre><code>
+// Break statement
+for (int i = 0; i < 10; i++) {
+    if (i == 5) break;
+    printf("%d ", i);
+}
+
+// Continue statement
+for (int i = 0; i < 5; i++) {
+    if (i == 2) continue;
+    printf("%d ", i);
+}
+
+// Goto statement (use sparingly)
+int i = 0;
+start:
+    if (i < 5) {
+        printf("%d ", i);
+        i++;
+        goto start;
+    }
+                    </code></pre>
+                </div>
+                <p>Jump statements alter the flow of program execution:</p>
+                <ul>
+                    <li><strong>break:</strong> Exits the current loop or switch</li>
+                    <li><strong>continue:</strong> Skips remaining loop body and continues with next iteration</li>
+                    <li><strong>goto:</strong> Jumps to a labeled statement (use with caution)</li>
+                    <li><strong>return:</strong> Exits the current function</li>
+                </ul>
+            </div>
+
+            <div class="topic-section">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Always use braces {} even for single-line blocks</li>
+                    <li>Avoid deep nesting of control structures</li>
+                    <li>Use switch instead of long if-else chains when possible</li>
+                    <li>Avoid goto statements in modern code</li>
+                    <li>Keep loop conditions simple and clear</li>
+                    <li>Use meaningful variable names in loop counters</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/phetpeeve" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 Japhet Personal Project. C Programming Guide. All rights reserved.</p>
+    </footer>
+</body>
+</html>
