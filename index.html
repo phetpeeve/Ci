@@ -3,27 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Layout</title>
+    <title>C Programming Guide</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav>
-        <div class="menu-icon">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <div class="nav-container">
+            <h1>C Programming</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#basics">Basics</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        <ul class="nav-list">
-            <li><a href="index.html"><img src="home.svg" class="home-icon" alt="Home"></a></li>
-            <li><a href="exercise.html"><img src="briefcase.svg" class="exercise-icon" alt="Exercise"></a></li>
-            <li><a href="about.html"><img src="info.svg" class="about-icon" alt="About"></a></li>
-        </ul>
     </nav>
-    <div class="introduction">
-        <h1>Welcome</h1>
-        <p>This is the introduction section.</p>
-    </div>
-    <script src="main.js"></script>
+
+    <main>
+        <section id="about">
+            <h2>About C Programming</h2>
+            <div class="about-content">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo" class="profile-img">
+                <div>
+                    <p>C is a powerful general-purpose programming language created by Dennis Ritchie at Bell Labs in 1972. It's one of the most widely used programming languages of all time and has greatly influenced many other popular programming languages.</p>
+                    <p>C is known for its efficiency, flexibility, and direct control over hardware. It's commonly used in system programming, embedded systems, and applications where performance is critical.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="basics">
+            <h2>C Programming Fundamentals & Advanced Topics</h2>
+            <div class="projects-grid">
+                <a href="variables.html" class="project-card-link">
+                    <div class="project-card">
+                        <h3>Variables and Data Types</h3>
+                        <p>Learn about int, float, char, arrays, structures, and user-defined data types in C.</p>
+                    </div>
+                </a>
+                <a href="control-structures.html" class="project-card-link">
+                    <div class="project-card">
+                        <h3>Control Structures</h3>
+                        <p>Master if-else statements, loops, switch cases, and jump statements like break and continue.</p>
+                    </div>
+                </a>
+                <a href="functions.html" class="project-card-link">
+                    <div class="project-card">
+                        <h3>Functions & Modular Programming</h3>
+                        <p>Understand function declaration, definition, recursion, and creating reusable code modules.</p>
+                    </div>
+                </a>
+                <a href="pointers.html" class="project-card-link">
+                    <div class="project-card">
+                        <h3>Pointers & Memory</h3>
+                        <p>Explore memory management, pointer operations, dynamic memory allocation, and memory safety.</p>
+                    </div>
+                </a>
+                <a href="file-operations.html" class="project-card-link">
+                    <div class="project-card">
+                        <h3>File Operations & I/O</h3>
+                        <p>Learn file handling, standard I/O operations, and working with binary and text files.</p>
+                    </div>
+                </a>
+                <a href="preprocessor.html" class="project-card-link">
+                    <div class="project-card">
+                        <h3>Preprocessor & Macros</h3>
+                        <p>Master preprocessor directives, macro definitions, and conditional compilation.</p>
+                    </div>
+                </a>
+                <a href="data-structures.html" class="project-card-link">
+                    <div class="project-card">
+                        <h3>Data Structures</h3>
+                        <p>Implement arrays, linked lists, stacks, queues, and trees in C.</p>
+                    </div>
+                </a>
+                <a href="advanced-concepts.html" class="project-card-link">
+                    <div class="project-card">
+                        <h3>Advanced Concepts</h3>
+                        <p>Explore bit manipulation, multi-threading, socket programming, and system calls.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Sample Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Calculator</h3>
+                    <p>A simple calculator implementing basic arithmetic operations.</p>
+                </div>
+                <div class="project-card">
+                    <h3>File Handler</h3>
+                    <p>Program to read, write, and manipulate files.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Linked List</h3>
+                    <p>Implementation of a basic data structure.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Your message"></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/phetpeeve" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 Japhet Personal Project. C Programming Guide. All rights reserved.</p>
+    </footer>
 </body>
 </html>
